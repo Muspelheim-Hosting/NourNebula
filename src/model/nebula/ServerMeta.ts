@@ -28,9 +28,9 @@ export function getDefaultServerMeta(id: string, version: string, options?: Serv
             icon: 'How to set the server icon: https://github.com/dscalzi/Nebula#setting-the-server-icon',
             address: 'localhost:25565',
             discord: {
-                shortId: '<FILL IN OR REMOVE DISCORD OBJECT>',
-                largeImageText: '<FILL IN OR REMOVE DISCORD OBJECT>',
-                largeImageKey: '<FILL IN OR REMOVE DISCORD OBJECT>'
+                shortId: '1299846573051609138',
+                largeImageText: 'In a Muspelheim Modpack',
+                largeImageKey: 'nyan-cat'
             },
             mainServer: false,
             autoconnect: false

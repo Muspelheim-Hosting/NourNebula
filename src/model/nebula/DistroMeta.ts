@@ -6,8 +6,20 @@ export interface DistroMeta {
      * Distribution metadata to be forwarded to the distribution file.
      */
     meta: {
-        rss: Distribution['rss']
         discord?: Distribution['discord']
+        config?: {
+            disableExtraMods?: string[]
+            themeOverrides?: {
+                primaryColor: string | null
+                secondaryColor: string | null
+                backgrounds: (string | null)[]
+                banners: {
+                    url: string
+                    link: string
+                    title: string
+                }[]
+            }
+        }
     }
 
 }
@@ -17,11 +29,34 @@ export function getDefaultDistroMeta(): DistroMeta {
     return {
 
         meta: {
-            rss: '<LINK TO RSS FEED>',
             discord: {
-                clientId: '<FILL IN OR REMOVE DISCORD OBJECT>',
-                smallImageText: '<FILL IN OR REMOVE DISCORD OBJECT>',
-                smallImageKey: '<FILL IN OR REMOVE DISCORD OBJECT>'
+                clientId: '1299846573051609138',
+                smallImageText: 'Muspelheim Launcher',
+                smallImageKey: 'nyan-cat'
+            },
+            config: {
+                disableExtraMods: [
+                    'mods/**/*.jar'
+                ],
+                themeOverrides: {
+                    primaryColor: null,
+                    secondaryColor: null,
+                    backgrounds: [
+                        null
+                    ],
+                    banners: [
+                        {
+                            url: 'https://createacademy.net/images/updateinfo.png',
+                            link: 'https://bsky.app/profile/createacademy.net/post/3ljnmhjvans2e',
+                            title: 'Update 6 ETA'
+                        },
+                        {
+                            url: 'https://createacademy.net/images/season4.png',
+                            link: 'https://x.com/CreateAcademyMC/',
+                            title: 'Engineer Journey 4!'
+                        }
+                    ]
+                }
             }
         }
         

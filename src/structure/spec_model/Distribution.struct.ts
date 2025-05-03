@@ -1,12 +1,50 @@
 import { mkdirs, pathExists } from 'fs-extra/esm'
 import { readFile, writeFile } from 'fs/promises'
-import { Distribution } from 'helios-distribution-types'
 import { SpecModelStructure } from './SpecModelStructure.js'
 import { ServerStructure } from './Server.struct.js'
 import { join, resolve } from 'path'
 import { DistroMeta, getDefaultDistroMeta } from '../../model/nebula/DistroMeta.js'
 import { addSchemaToObject, SchemaTypes } from '../../util/SchemaUtil.js'
 import { LoggerUtil } from '../../util/LoggerUtil.js'
+import { Server } from 'helios-distribution-types'
+
+interface Distribution {
+    version: string
+    /**
+     * Global settings for Discord Rich Presence.
+     */
+    discord?: {
+        /**
+         * Client ID for the Application registered with Discord.
+         */
+        clientId: string
+        /**
+         * Tootltip for the smallImageKey.
+         */
+        smallImageText: string
+        /**
+         * Name of the uploaded image for the small profile artwork.
+         */
+        smallImageKey: string
+    }
+    config?: {
+        disableExtraMods?: string[]
+        themeOverrides?: {
+            primaryColor: string | null
+            secondaryColor: string | null
+            backgrounds: (string | null)[]
+            banners: {
+                url: string
+                link: string
+                title: string
+            }[]
+        }
+    }
+    /**
+     * Array of server objects.
+     */
+    servers: Server[]
+}
 
 const logger = LoggerUtil.getLogger('DistributionStructure')
 
@@ -52,9 +90,9 @@ export class DistributionStructure implements SpecModelStructure<Distribution> {
         const distroMeta = JSON.parse(await readFile(resolve(this.metaPath, this.DISTRO_META_FILE), 'utf-8')) as DistroMeta
 
         return {
-            version: '1.0.0',
-            rss: distroMeta.meta.rss,
+            version: '1.2.0',
             ...(distroMeta.meta.discord ? {discord: distroMeta.meta.discord} : {}),
+            ...(distroMeta.meta.config ? {config: distroMeta.meta.config} : {}),
             servers: await this.serverStruct.getSpecModel()
         }
     }
