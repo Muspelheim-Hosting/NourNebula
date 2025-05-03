@@ -25,11 +25,11 @@ export function getDefaultServerMeta(id: string, version: string, options?: Serv
             version: options?.version ?? '1.0.0',
             name: `${id} (Minecraft ${version})`,
             description: `${id} Running Minecraft ${version}`,
-            icon: 'How to set the server icon: https://github.com/Tyrthurey/Bifrost#setting-the-server-icon',
+            icon: 'How to set the server icon: https://github.com/Void-Event-Hub/Nebula#setting-the-server-icon',
             address: 'localhost:25565',
             discord: {
                 shortId: '1368305428764561428',
-                largeImageText: 'In a Muspelheim Modpack',
+                largeImageText: 'In a Void Event Hub Event',
                 largeImageKey: 'nyan-cat'
             },
             mainServer: false,

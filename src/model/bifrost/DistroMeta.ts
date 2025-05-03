@@ -31,7 +31,7 @@ export function getDefaultDistroMeta(): DistroMeta {
         meta: {
             discord: {
                 clientId: '1368305428764561428',
-                smallImageText: 'Muspelheim Launcher',
+                smallImageText: 'Void Event Launcher',
                 smallImageKey: 'nyan-cat'
             },
             config: {
