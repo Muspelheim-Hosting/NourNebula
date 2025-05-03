@@ -30,9 +30,9 @@ export function getDefaultDistroMeta(): DistroMeta {
 
         meta: {
             discord: {
-                clientId: '1368305428764561428',
+                clientId: '1368373789947334717',
                 smallImageText: 'Void Event Launcher',
-                smallImageKey: 'nyan-cat'
+                smallImageKey: 'void-event-logo'
             },
             config: {
                 disableExtraMods: [
