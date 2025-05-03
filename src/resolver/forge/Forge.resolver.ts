@@ -77,7 +77,7 @@ export abstract class ForgeResolver extends BaseResolver {
             logger.error('==================================================================')
 
             logger.error('To abort, use CTRL + C.')
-            logger.error('Nebula will proceed in 15 seconds..')
+            logger.error('Bifrost will proceed in 15 seconds..')
             const target = new Date().getTime() + (15*1000)
             while(new Date().getTime() <= target) {
                 // Wait

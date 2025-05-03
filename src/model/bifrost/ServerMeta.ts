@@ -25,10 +25,10 @@ export function getDefaultServerMeta(id: string, version: string, options?: Serv
             version: options?.version ?? '1.0.0',
             name: `${id} (Minecraft ${version})`,
             description: `${id} Running Minecraft ${version}`,
-            icon: 'How to set the server icon: https://github.com/dscalzi/Nebula#setting-the-server-icon',
+            icon: 'How to set the server icon: https://github.com/Tyrthurey/Bifrost#setting-the-server-icon',
             address: 'localhost:25565',
             discord: {
-                shortId: '1299846573051609138',
+                shortId: '1368305428764561428',
                 largeImageText: 'In a Muspelheim Modpack',
                 largeImageKey: 'nyan-cat'
             },

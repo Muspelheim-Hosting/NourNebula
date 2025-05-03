@@ -24,8 +24,8 @@ function getRoot(): string {
 }
 
 function getHeliosDataFolder(): string | null {
-    if(process.env.HELIOS_DATA_FOLDER) {
-        return resolvePath(process.env.HELIOS_DATA_FOLDER)
+    if(process.env.MUSPELHEIM_DATA_FOLDER) {
+        return resolvePath(process.env.MUSPELHEIM_DATA_FOLDER)
     }
     return null
 }
@@ -310,7 +310,7 @@ const generateDistroCommand: CommandModule = {
         const invalidateCache = argv.invalidateCache as boolean ?? false
         const heliosDataFolder = getHeliosDataFolder()
         if(doLocalInstall && heliosDataFolder == null) {
-            logger.error('You MUST specify HELIOS_DATA_FOLDER in your .env when using the --installLocal option.')
+            logger.error('You MUST specify MUSPELHEIM_DATA_FOLDER in your .env when using the --installLocal option.')
             return
         }
 

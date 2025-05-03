@@ -4,7 +4,7 @@ import { capitalize } from '../../../util/StringUtils.js'
 import { FabricModJson } from '../../../model/fabric/FabricModJson.js'
 import { MinecraftVersion } from '../../../util/MinecraftVersion.js'
 import { BaseModStructure } from './Mod.struct.js'
-import { UntrackedFilesOption } from '../../../model/nebula/ServerMeta.js'
+import { UntrackedFilesOption } from '../../../model/bifrost/ServerMeta.js'
 
 export class FabricModStructure extends BaseModStructure<FabricModJson> {
 

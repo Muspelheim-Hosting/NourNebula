@@ -5,7 +5,7 @@ import { ForgeGradle2Adapter } from '../resolver/forge/adapter/ForgeGradle2.reso
 import { ForgeResolver } from '../resolver/forge/Forge.resolver.js'
 import { BaseForgeModStructure } from '../structure/spec_model/module/ForgeMod.struct.js'
 import { MinecraftVersion } from './MinecraftVersion.js'
-import { UntrackedFilesOption } from '../model/nebula/ServerMeta.js'
+import { UntrackedFilesOption } from '../model/bifrost/ServerMeta.js'
 
 export class VersionSegmentedRegistry {
 

@@ -6,7 +6,7 @@ import { McModInfoList } from '../../../../model/forge/McModInfoList.js'
 import { BaseForgeModStructure } from '../ForgeMod.struct.js'
 import { MinecraftVersion } from '../../../../util/MinecraftVersion.js'
 import { ForgeModType_1_7 } from '../../../../model/claritas/ClaritasResult.js'
-import { UntrackedFilesOption } from '../../../../model/nebula/ServerMeta.js'
+import { UntrackedFilesOption } from '../../../../model/bifrost/ServerMeta.js'
 
 export class ForgeModStructure17 extends BaseForgeModStructure<McModInfo> {
 

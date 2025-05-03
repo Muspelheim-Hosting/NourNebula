@@ -4,7 +4,7 @@ import { MinecraftVersion } from '../../../util/MinecraftVersion.js'
 import { BaseModStructure } from './Mod.struct.js'
 import { LibraryType } from '../../../model/claritas/ClaritasLibraryType.js'
 import { ClaritasException } from './Module.struct.js'
-import { UntrackedFilesOption } from '../../../model/nebula/ServerMeta.js'
+import { UntrackedFilesOption } from '../../../model/bifrost/ServerMeta.js'
 
 export abstract class BaseForgeModStructure<T> extends BaseModStructure<T> implements VersionSegmented {
 

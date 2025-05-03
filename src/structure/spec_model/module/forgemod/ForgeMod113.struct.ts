@@ -5,7 +5,7 @@ import { VersionUtil } from '../../../../util/VersionUtil.js'
 import { ModsToml } from '../../../../model/forge/ModsToml.js'
 import { BaseForgeModStructure } from '../ForgeMod.struct.js'
 import { MinecraftVersion } from '../../../../util/MinecraftVersion.js'
-import { UntrackedFilesOption } from '../../../../model/nebula/ServerMeta.js'
+import { UntrackedFilesOption } from '../../../../model/bifrost/ServerMeta.js'
 
 export class ForgeModStructure113 extends BaseForgeModStructure<ModsToml> {
 

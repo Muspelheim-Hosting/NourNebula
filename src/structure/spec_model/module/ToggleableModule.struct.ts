@@ -4,7 +4,7 @@ import { mkdirs } from 'fs-extra/esm'
 import { Stats } from 'fs'
 import { resolve } from 'path'
 import { MinecraftVersion } from '../../../util/MinecraftVersion.js'
-import { UntrackedFilesOption } from '../../../model/nebula/ServerMeta.js'
+import { UntrackedFilesOption } from '../../../model/bifrost/ServerMeta.js'
 
 export enum ToggleableNamespace {
 

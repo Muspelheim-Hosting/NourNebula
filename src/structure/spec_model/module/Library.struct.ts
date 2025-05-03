@@ -4,7 +4,7 @@ import { Stats } from 'fs'
 import { join } from 'path'
 import { URL } from 'url'
 import { MinecraftVersion } from '../../../util/MinecraftVersion.js'
-import { UntrackedFilesOption } from '../../../model/nebula/ServerMeta.js'
+import { UntrackedFilesOption } from '../../../model/bifrost/ServerMeta.js'
 
 export class LibraryStructure extends ModuleStructure {
 

@@ -1,6 +1,6 @@
-# Nebula
+# Bifrost
 
-Generate a distribution.json for Helios. Documentation on this format can be found [here][distro.md].
+Generate a distribution.json for the Muspelheim Launcher. Documentation on this format can be found [here][distro.md].
 
 ## Requirements
 
@@ -20,12 +20,12 @@ Example
 JAVA_EXECUTABLE=C:\Program Files\Eclipse Adoptium\jdk-17.0.12.7-hotspot\bin\java.exe
 ROOT=D:\TestRoot2
 BASE_URL=http://localhost:8080/
-HELIOS_DATA_FOLDER=C:\Users\user\AppData\Roaming\Helios Launcher
+MUSPELHEIM_DATA_FOLDER=C:\Users\user\AppData\Roaming\Muspelheim Launcher
 ```
 
 ## Usage
 
-Nebula is still being developed. Usage may change, but it has remained stable for some time now.
+Bifrost is still being developed. Usage may change, but it has remained stable for some time now.
 
 #### TL;DR (Too Long; Didn't Read) Usage
 
@@ -162,7 +162,7 @@ Options:
 
 #### Notes
 
-As of Forge 1.13, the installer must be run to generate required files. The installer output is cached by default. This is done to speed up subsequent builds and allow Nebula to be run as a CI job. Options are provided to discard installer output (no caching) and invalidate caches (delete cached output and require fresh generation). To invalidate only a single version cache, manually delete the cached folder.
+As of Forge 1.13, the installer must be run to generate required files. The installer output is cached by default. This is done to speed up subsequent builds and allow Bifrost to be run as a CI job. Options are provided to discard installer output (no caching) and invalidate caches (delete cached output and require fresh generation). To invalidate only a single version cache, manually delete the cached folder.
 
 >
 > Example Usage
@@ -176,7 +176,7 @@ As of Forge 1.13, the installer must be run to generate required files. The inst
 
 #### Generate Schemas
 
-Generate the JSON schemas used by Nebula's internal types (ex. Distro Meta and Server Meta schemas). This command should be used to update the schemas when a change to Nebula requires it. You may need to reopen your editor for the new JSON schemas to take effect.
+Generate the JSON schemas used by Bifrost's internal types (ex. Distro Meta and Server Meta schemas). This command should be used to update the schemas when a change to Bifrost requires it. You may need to reopen your editor for the new JSON schemas to take effect.
 
 `generate schemas`
 
@@ -200,7 +200,7 @@ Get the recommended version of Forge. If no recommended build is available, it w
 
 ## File Structure Setup (Tentative)
 
-Nebula aims to provide users with an information preserving structure for storing files. The application will use this structure to generate a full distribution.json for HeliosLauncher. For coherency, the distribution structure is modularized and encapsulated by a directory pattern. These encapsulations will be explained below. They can be generated manually or by using the commands documented above.
+Bifrost aims to provide users with an information preserving structure for storing files. The application will use this structure to generate a full distribution.json for HeliosLauncher. For coherency, the distribution structure is modularized and encapsulated by a directory pattern. These encapsulations will be explained below. They can be generated manually or by using the commands documented above.
 
 ### Distribution Encapsulation
 
@@ -290,7 +290,7 @@ Sample:
     "version": "1.0.0",
     "name": "Test (Minecraft 1.12.2)",
     "description": "Test Running Minecraft 1.12.2 (Forge v14.23.5.2854)",
-    "icon": "How to set the server icon: https://github.com/dscalzi/Nebula#setting-the-server-icon",
+    "icon": "How to set the server icon: https://github.com/Tyrthurey/Bifrost#setting-the-server-icon",
     "address": "localhost:25565",
     "discord": {
       "shortId": "1.12.2 Test Server",
@@ -351,11 +351,15 @@ Another example where all `optionalon` forgemods are untracked. **Untracking mod
 
 ### Note on JSON Schemas
 
-The `$schema` property in a JSON file is a URL to a JSON schema file. This property is optional. Nebula provides schemas for internal types to make editing the JSON easier. Editors, such as Visual Studio Code, will use this schema file to validate the data and show useful information, like property descriptions. Valid properties will also be autocompleted. For detailed information, you may view the [JSON Schema Website][jsonschemawebsite].
+The `$schema` property in a JSON file is a URL to a JSON schema file. This property is optional. Bifrost provides schemas for internal types to make editing the JSON easier. Editors, such as Visual Studio Code, will use this schema file to validate the data and show useful information, like property descriptions. Valid properties will also be autocompleted. For detailed information, you may view the [JSON Schema Website][jsonschemawebsite].
 
-Nebula will store JSON schemas in `${ROOT}/schemas`. This is so that they will always be in sync with your local version of Nebula. They will initially be generated by the `init root` command. To update the schemas, you can run the `generate schemas` command.
+Bifrost will store JSON schemas in `${ROOT}/schemas`. This is so that they will always be in sync with your local version of Bifrost. They will initially be generated by the `init root` command. To update the schemas, you can run the `generate schemas` command.
 
 
 [dotenvnpm]: https://www.npmjs.com/package/dotenv
 [distro.md]: https://github.com/dscalzi/HeliosLauncher/blob/master/docs/distro.md
 [jsonschemawebsite]: https://json-schema.org/
+
+### Special Thanks
+
+* [@dscalzi](https://github.com/dscalzi) and his [project](https://github.com/dscalzi/Nebula)

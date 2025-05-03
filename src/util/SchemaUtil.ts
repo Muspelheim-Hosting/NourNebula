@@ -3,8 +3,8 @@ import { writeFile } from 'fs/promises'
 import { join, resolve } from 'path'
 import { createGenerator } from 'ts-json-schema-generator'
 import { URL, fileURLToPath } from 'url'
-import { DistroMeta } from '../model/nebula/DistroMeta.js'
-import { ServerMeta } from '../model/nebula/ServerMeta.js'
+import { DistroMeta } from '../model/bifrost/DistroMeta.js'
+import { ServerMeta } from '../model/bifrost/ServerMeta.js'
 import { LoggerUtil } from './LoggerUtil.js'
 
 const logger = LoggerUtil.getLogger('SchemaUtil')

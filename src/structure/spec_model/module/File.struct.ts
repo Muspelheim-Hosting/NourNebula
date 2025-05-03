@@ -6,7 +6,7 @@ import { ModuleStructure } from './Module.struct.js'
 import { readdir, stat } from 'fs/promises'
 import { join, resolve, sep } from 'path'
 import { MinecraftVersion } from '../../../util/MinecraftVersion.js'
-import { UntrackedFilesOption } from '../../../model/nebula/ServerMeta.js'
+import { UntrackedFilesOption } from '../../../model/bifrost/ServerMeta.js'
 
 export class MiscFileStructure extends ModuleStructure {
 

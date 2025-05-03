@@ -10,7 +10,7 @@ import { LibraryType } from '../../../model/claritas/ClaritasLibraryType.js'
 import { ClaritasResult, ClaritasModuleMetadata } from '../../../model/claritas/ClaritasResult.js'
 import { ClaritasWrapper } from '../../../util/java/ClaritasWrapper.js'
 import { MinecraftVersion } from '../../../util/MinecraftVersion.js'
-import { UntrackedFilesOption } from '../../../model/nebula/ServerMeta.js'
+import { UntrackedFilesOption } from '../../../model/bifrost/ServerMeta.js'
 
 export interface ModuleCandidate {
     file: string
