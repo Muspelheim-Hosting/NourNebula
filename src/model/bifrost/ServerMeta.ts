@@ -28,7 +28,7 @@ export function getDefaultServerMeta(id: string, version: string, options?: Serv
             icon: 'How to set the server icon: https://github.com/Void-Event-Hub/Nebula#setting-the-server-icon',
             address: 'localhost:25565',
             discord: {
-                shortId: '1368373789947334717',
+                shortId: 'Random Mod',
                 largeImageText: 'In a Void Event Hub Event',
                 largeImageKey: 'nyan-cat'
             },
