@@ -29,7 +29,7 @@ export function getDefaultServerMeta(id: string, version: string, options?: Serv
             address: 'localhost:25565',
             discord: {
                 shortId: 'Random Mod',
-                largeImageText: 'In a Void Event Hub Event',
+                largeImageText: 'Playing in Nours Realm',
                 largeImageKey: 'nyan-cat'
             },
             mainServer: false,
